@@ -35,6 +35,7 @@ This repository tracks notable **commercial speech APIs** and **open-source proj
   - [🤖 Voice Agent Orchestration](#-voice-agent-orchestration)
   - [🛠️ Additional Open-Source Speech Tools](#️-additional-open-source-speech-tools)
 - [🤝 How to Contribute](#-how-to-contribute)
+- [💖 Support & Sponsorship](#-support--sponsorship)
 - [⚠️ Disclaimer](#️-disclaimer)
 - [⭐ Star History](#-star-history)
 
@@ -158,6 +159,19 @@ Speech processing represents one of the strongest open-source AI ecosystems. The
 2. Add/edit entries in `README.md` following the standardized table or bullet format ✍️
 3. Include: Project name, official website/repository URL, short description, and pricing/star metadata 📌
 4. Submit a Pull Request with a clear summary of additions 🚀
+
+---
+
+## 💖 Support & Sponsorship
+
+Thank you for visiting this repository! If you find this curated list of speech recognition, text-to-speech, and voice AI resources helpful, please consider supporting the project:
+
+- ⭐ **Star** this repository on GitHub to show your appreciation and help others discover it.
+- 🍴 **Fork** it to keep your own reference copy or contribute new speech APIs & tools.
+- 📢 **Share** it with fellow voice AI developers, engineers, and researchers!
+- ☕ **Buy me a coffee / Sponsor**: If you'd like to support ongoing maintenance and research, feel free to sponsor via the [GitHub Sponsors Dashboard](https://github.com/sponsors/ishandutta2007).
+
+[![Sponsor](https://img.shields.io/badge/Sponsor-GitHub%20Sponsors-ea4aaa?style=for-the-badge&logo=githubsponsors&logoColor=white)](https://github.com/sponsors/ishandutta2007)
 
 ---
 
