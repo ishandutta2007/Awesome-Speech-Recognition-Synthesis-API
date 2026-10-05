@@ -1,295 +1,180 @@
-# Awesome-Speech-Recognition-Synthesis-API
-
-## Top Speech Recognition & Synthesis API Ecosystem
-
-
-
-**Curated List of SaaS Products & Open-Source GitHub Projects**  
-
-*Focused on Speech-to-Text, Text-to-Speech & Real-Time Voice AI Pipelines*  
-
-**Last updated: October 2026**
-
-
-
-This repository tracks notable **commercial speech APIs** and **open-source projects** that convert speech to text, synthesize natural-sounding audio, and orchestrate complete voice agent pipelines. These tools power transcription services, voice assistants, accessibility features, and conversational AI applications.
-
-
-
-**Examples** include Microsoft Speech Service, Google Cloud Speech-to-Text, AWS Transcribe, Deepgram, AssemblyAI, ElevenLabs, Speechmatics, Rev.ai, PlayHT, and Whisper API (the category leaders).
-
-
-
-**Open-source emphasis**: Speech processing is one of the strongest open-source domains. **Whisper** (MIT), **Kyutai STT/TTS**, **Kokoro**, and **Pipecat** collectively enable fully local voice pipelines with production-grade latency, while **Fish Speech**, **Chatterbox**, and **Sesame CSM** push TTS quality to commercial parity. This section is heavily expanded.
-
-
-
-Contributions welcome! Open a PR to add/update entries. Keep descriptions factual and link to official sites.
-
-
-
-## Table of Contents
-
-- [SaaS/Hosted Platforms](#saas-hosted-platforms)
-
-- [Open-Source GitHub Projects](#open-source-github-projects)
-
-- [How to Contribute](#how-to-contribute)
-
-- [Disclaimer](#disclaimer)
-
-
-
-## SaaS/Hosted Platforms
-
-
-
-- **[Deepgram](https://deepgram.com/)**  
-
-  Leading speech-to-text API with **Nova-3** achieving sub-300ms streaming latency and strong accuracy across multiple languages . Offers **self-hosted deployment** for enterprise compliance, bundled voice agent stack with Flux end-of-turn detection, and transparent per-minute pricing ($0.0077/min for Nova-3 Monolingual streaming) . **The go-to STT API for production voice agents** where latency matters .
-
-
-
-- **[AssemblyAI](https://www.assemblyai.com/)**  
-
-  Speech AI platform with **Universal-3.5 Pro Realtime** for streaming and strong batch accuracy. Offers **self-hosted containers** (one instance handles 48 concurrent streams) for data sovereignty, GovCloud support, and documented Kubernetes/ECS deployment . **Best for regulated industries** needing on-premises STT with enterprise compliance .
-
-
-
-- **[ElevenLabs](https://elevenlabs.io/)**  
-
-  The **gold standard for voice quality and cloning fidelity**, with the most natural-sounding TTS voices and emotional range . Flash v2.5 delivers ~75ms inference latency for real-time applications . Pricing at $0.30/1k characters for premium tiers . **Best when voice quality is the brand** — character voices, premium consumer products, audiobooks .
-
-
-
-- **[Microsoft Speech Service](https://azure.microsoft.com/en-us/products/ai-services/speech-to-text)**  
-
-  Azure's enterprise speech platform with **100+ language support**, custom model training, and strong compliance credentials . STT pricing around $1/hour; TTS at $4-16/1M characters . **Best for enterprise applications** already invested in Azure infrastructure .
-
-
-
-- **[Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text)**  
-
-  Google's speech API supporting **125+ languages** with speaker diarization, automatic punctuation, and integration with Google Cloud services . **Best for multi-language applications** and Google Cloud-native deployments .
-
-
-
-- **[AWS Transcribe](https://aws.amazon.com/transcribe/)**  
-
-  AWS's speech-to-text service with streaming and batch modes, custom vocabulary, and speaker diarization. **Best for AWS-native applications** needing integrated transcription .
-
-
-
-- **[Speechmatics](https://www.speechmatics.com/)**  
-
-  Enterprise speech recognition with strong accuracy across accents and dialects, available as cloud API or self-hosted .
-
-
-
-- **[Rev.ai](https://www.rev.ai/)**  
-
-  Speech-to-text API with high accuracy and human transcription services for critical use cases .
-
-
-
-- **[PlayHT](https://play.ht/)**  
-
-  AI voice platform with voice cloning, real-time streaming, and conversational AI capabilities. Pricing from $31/month for 50k characters .
-
-
-
-## Open-Source GitHub Projects
-
-
-
-### Speech-to-Text (STT / ASR)
-
-
-
-- **[OpenAI Whisper](https://github.com/openai/whisper)**  
-
-  **The most widely adopted open-source ASR model**, MIT licensed with 80,000+ GitHub stars . Multilingual (~99 languages) with `large-v3` achieving ~7.4% average WER — **the accuracy reference everything else is measured against** . Weights and code are fully MIT, making it **commercially safe** . Original PyTorch implementation is slow; **large-v3-turbo** (809M params) is the practical default, running ~8× faster . **The de facto open-source STT baseline** — every pipeline either uses it or distills from it .
-
-
-
-- **[whisper.cpp](https://github.com/ggml-org/whisper.cpp)**  
-
-  **C/C++ port of Whisper** built on the ggml tensor library, MIT licensed . **Runs CPU-only** — no Python, no GPU required . Builds for ARM, Apple Silicon with Core ML acceleration . **The lightweight baseline for offline dictation** — powers many desktop apps .
-
-
-
-- **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)**  
-
-  **CTranslate2-powered Whisper** that is **up to 4× faster than reference implementation** at the same accuracy, with lower memory usage . MIT licensed . **The sweet spot for Python users** wanting a drop-in library call .
-
-
-
-- **[Kyutai STT](https://github.com/kyutai-labs/delayed-streams-modeling)**  
-
-  **Streaming STT with semantic VAD built in** — detects end-of-turn by sentence meaning, not silence . Native French/English support with ~500ms latency after word completion . **~400 concurrent streams on an H100** — cost per call collapses with scale . Only ~2.5 GB VRAM . **Best for real-time French/English voice agents** where turn-taking detection is critical .
-
-
-
-- **[NVIDIA Parakeet TDT](https://github.com/NVIDIA/NeMo)**  
-
-  **State-of-the-art English ASR** — Parakeet TDT 0.6B v2 topped Open ASR Leaderboard at 6.05% average WER, beating Whisper large-v3 on English . CC-BY-4.0 licensed (commercial OK with attribution) . **v3 supports 25 European languages** including French with auto-detect . **10× faster than Whisper turbo on English** . **Best accuracy-per-watt for batch transcription** .
-
-
-
-- **[WhisperX](https://github.com/m-bain/whisperX)**  
-
-  **Whisper + pyannote diarization + wav2vec2 alignment** in one pipeline, BSD-2-Clause licensed . **Word-level timestamps and speaker labels** — the shortest path from audio to "who said what" . ~70× realtime batched on GPU . **Best for meeting transcripts and subtitles** .
-
-
-
-- **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)**  
-
-  **The most "runs everywhere" option** — Apache-2.0 licensed, built on ONNX Runtime . Does **streaming and offline ASR, TTS, speaker recognition, and VAD** with no internet . Prebuilt models for dozens of languages targeting servers, desktops, mobile, and embedded devices . **Best for real-time, multilingual, fully offline recognition** .
-
-
-
-### Text-to-Speech (TTS)
-
-
-
-- **[Kokoro-82M](https://github.com/hexgrad/kokoro)**  
-
-  **The practical choice for English narration on CPU** — Apache-2.0 licensed with only **82M parameters** . Runs without GPU on any device . Dropped from #1 on TTS Arena on quality but remains **the best license-clean option for English** . **Kokoro-FastAPI** (5k stars) adds weighted voice mixing for voice design . **Best for commercial-safe, lightweight TTS** .
-
-
-
-- **[Fish Speech S2 Pro](https://github.com/fishaudio/fish-speech)**  
-
-  **Leads TTS Arena at Elo 1128** with 5B parameters, fine-grained prosody/emotion control via 15,000+ tags, and 80+ languages . **RTF 0.195 with 100ms TTFA streaming** . **Caveat: non-commercial license** — requires paid license for commercial use . **Best when quality outranks license cleanliness** .
-
-
-
-- **[Chatterbox (Resemble AI)](https://github.com/resemble-ai/chatterbox)**  
-
-  **MIT-licensed voice cloning with paralinguistic tags** — laugh, sigh, etc. . **Voice clone in under 200ms** with Turbo variant . 23+ languages supported . **The best commercially-safe voice cloning option** . **Best for voice cloning where MIT licensing matters** .
-
-
-
-- **[Sesame CSM-1B](https://github.com/SesameAILabs/csm)**  
-
-  **Real-time conversational TTS** built on Llama + Mimi backbone, Apache-2.0 licensed . **Best for conversational voice agents** needing natural turn-taking .
-
-
-
-- **[Kyutai TTS 1.6B](https://github.com/kyutai-labs/delayed-streams-modeling)**  
-
-  **Delayed streams modeling** — synthesis starts while LLM is still writing . ~450-750ms TTFA, 100+ community voices . ~5.3 GB VRAM . **Pocket TTS (100M)** variant runs **real-time on CPU** with voice cloning — enables GPU-free pilots . **Best for French TTS and low-latency streaming** .
-
-
-
-- **[F5-TTS](https://github.com/SWivid/F5-TTS)**  
-
-  Popular voice cloning model with 14.7k stars . **Trap: code is MIT but pre-trained weights are CC-BY-NC** — commercial use requires license . **Best for non-commercial voice cloning experiments** .
-
-
-
-- **[Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS)**  
-
-  Apache-2.0 licensed 3B TTS model with natural narration quality . **Best for commercially-safe narration** with larger model quality .
-
-
-
-### Voice Agent Orchestration
-
-
-
-- **[Pipecat](https://github.com/pipecat-ai/pipecat)**  
-
-  **Open-source Python framework for voice agents** with end-to-end latency **800-950ms** across community reports . Strong adapter ecosystem for STT, LLM, and TTS providers . **Best for building custom voice pipelines** with Python/FastAPI backends .
-
-
-
-- **[LiveKit Agents](https://github.com/livekit/agents)**  
-
-  **Voice agent framework on LiveKit's WebRTC infrastructure** with ~750-900ms E2E latency . **The same infrastructure Future AGI's simulation SDK uses** . **Best for cloud-native voice agents** needing scalable WebRTC .
-
-
-
-- **[Unmute (Kyutai)](https://github.com/kyutai-labs/unmute)**  
-
-  **Reference implementation** assembling Kyutai STT → any OpenAI-compatible LLM → Kyutai TTS . **Latency < 1s (~450ms TTFA)** deployable with 16 GB VRAM total . MIT licensed . **Caveats: no function calling, no telephony** — reference architecture, not a product .
-
-
-
-- **[Speaches](https://github.com/speaches-ai/speaches)**  
-
-  **"Ollama for audio"** — dynamic model auto-load/unload per request . MIT licensed, portable . **OpenAI Realtime-API emulation** for third-party client compatibility . **Best for multi-engine VRAM juggling** and API compatibility .
-
-
-
-- **[omnivoice](https://github.com/plexusone/omnivoice-core)**  
-
-  **Go framework with unified interfaces** for STT, TTS, realtime providers, and voice agent orchestration . Includes mock providers for testing without API keys, barge-in detection, MCP server, and subtitle generation (SRT/WebVTT) . **Best for Go-based voice applications** .
-
-
-
-### Additional Strong Open-Source Options
-
-
-
-- **Distil-Whisper** — 6× faster than large-v3, within ~1% WER on English. English-only limit .
-
-- **Voxtral Mini 3B** — Mistral AI's speech understanding model (transcribe + summarize + answer). Apache-2.0 .
-
-- **Moonshine** — ~5× faster than Whisper equivalents on short clips, runs on Raspberry Pi. MIT licensed, English-only .
-
-- **Vosk** — True streaming with partial results on weakest hardware. Apache-2.0, pre-transformer, worse WER than Whisper .
-
-- **pyannote.audio** — De facto open-source diarization toolkit. MIT, CC-BY-4.0 pipeline .
-
-- **S1-mini (Superwhisper)** — 484 MB, 0.6B parameter model for **cleaning raw ASR transcripts** — fixes filler words, self-corrections, formatting. Runs completely locally .
-
-- **TTS-WebUI** — 40+-model local audio hub with per-extension venv isolation .
-
-
-
-**Frameworks for building custom speech solutions**: Choose based on latency, licensing, and deployment. For **commercial-safe STT**, use **Whisper** (MIT weights) or **Parakeet TDT** (CC-BY-4.0 with attribution) . For **real-time French/English**, **Kyutai STT** provides semantic VAD and streaming . For **commercial-safe TTS**, **Kokoro-82M** (Apache-2.0, CPU-capable) and **Chatterbox** (MIT, voice cloning) are the license-clean picks . For **maximum quality without commercial constraints**, **Fish Speech S2 Pro** leads TTS Arena . For **full voice pipelines**, **Pipecat** + Whisper + Kokoro + any LLM delivers sub-1s latency with zero API costs . For **Go applications**, **omnivoice** provides unified provider interfaces .
-
-
-
-## How to Contribute
-
-
-
-1. Fork the repo.
-
-2. Add/edit entries in `README.md` (follow existing format).
-
-3. Include: name, link, 1–2 sentence description, and whether it's SaaS or open-source.
-
-4. Submit PR with a short explanation.
-
-
-
-Star the repo if you find it useful!
-
-
-
-## Disclaimer
-
-
-
-- This is a **community-curated** list — not exhaustive and not an endorsement.
-
-- Speech APIs process sensitive audio data. Self-hosted solutions require proper security hardening and compliance with data privacy regulations (GDPR, CCPA, HIPAA). **Commercial APIs may use data for model improvement** — review terms before processing sensitive content.
-
-- **License traps exist**: F5-TTS code is MIT but weights are CC-BY-NC . Fish Speech is non-commercial . Verify all licenses before commercial deployment.
-
-- **Latency claims are vendor-isolated figures** — real-world deployment adds network transit and p50 variance. Test with your own audio and accents before committing .
-
-- **Self-hosting crosses over at scale**: A $588/month GPU pays for itself at ~76,000 minutes of STT or ~7,800 minutes of voice agent usage . Below those volumes, managed platforms often win on total cost of ownership due to engineering time saved .
-
-
+# Awesome Speech Recognition & Synthesis API 🎙️⚡
+
+<p align="center">
+  <img src="assets/banner.svg" alt="Awesome Speech Recognition & Synthesis API Banner" width="100%">
+</p>
+
+<p align="center">
+  <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
+  <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="GitHub stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="GitHub forks"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="License"/></a>
+  <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
+</p>
 
 ---
 
+## 🌟 Top Speech Recognition & Synthesis API Ecosystem
 
+**Curated List of Commercial SaaS Products & Open-Source GitHub Projects**  
+*Focused on Speech-to-Text (STT/ASR), Text-to-Speech (TTS), Voice AI Agents, Audio Intelligence & Real-Time Voice Pipelines* 🗣️🚀
 
-**Made for voice AI engineers, speech researchers, and developers building conversational applications.**  
+**Last updated: October 2026** 📅
 
-Let's make speech recognition and synthesis more open, transparent, and accessible.
+This repository tracks notable **commercial speech APIs** and **open-source projects** that convert speech to text, synthesize natural-sounding audio, and orchestrate complete voice agent pipelines. These tools power transcription services, voice assistants, accessibility features, interactive voice response (IVR), and conversational AI applications.
+
+---
+
+## 📑 Table of Contents
+
+- [☁️ SaaS / Hosted Speech Platforms](#-saas--hosted-speech-platforms)
+- [🔓 Open-Source GitHub Projects](#-open-source-github-projects)
+  - [🎙️ Speech-to-Text (STT / ASR)](#️-speech-to-text-stt--asr)
+  - [🔊 Text-to-Speech (TTS)](#-text-to-speech-tts)
+  - [🤖 Voice Agent Orchestration](#-voice-agent-orchestration)
+  - [🛠️ Additional Open-Source Speech Tools](#️-additional-open-source-speech-tools)
+- [🤝 How to Contribute](#-how-to-contribute)
+- [⚠️ Disclaimer](#️-disclaimer)
+- [⭐ Star History](#-star-history)
+
+---
+
+## ☁️ SaaS / Hosted Speech Platforms
+
+### 📊 Market Dynamics & Industry Overview
+
+> 💡 **Market Size & Structure**: The global Speech and Voice Recognition market size is estimated at **$18.2 Billion in 2026** (projected to reach ~$45B+ by 2032 with a ~19.5% CAGR). The market structure is **moderately fragmented**: hyper-scale cloud incumbents (Google Cloud, Microsoft Azure, AWS) dominate high-volume enterprise infrastructure, while specialized voice AI category leaders (ElevenLabs, Deepgram, AssemblyAI) capture high-growth Developer & AI Voice Agent workloads through hyper-optimized streaming latency, domain accuracy, and zero-shot voice cloning capabilities.
+
+Below is the comparison of top commercial Speech-to-Text (STT) and Text-to-Speech (TTS) SaaS platforms sorted by company valuation/revenue in descending order:
+
+| Platform 🏢 | Valuation / Est. Annual Revenue 💰 | Starting Tier Pricing 💵 | Free Tier / Trial Limits 🎁 | Primary Strengths & Key Features 🚀 |
+| :--- | :--- | :--- | :--- | :--- |
+| **[Google Cloud Speech-to-Text](https://cloud.google.com/speech-to-text)** 🌐 | **$2.1 Trillion** (Alphabet MCap) / ~$35B+ Cloud Rev | **$0.016 / minute** (Standard STT v1/v2) | **60 minutes free / month** (recurred indefinitely for STT) | 125+ languages, speaker diarization, automatic punctuation, native Google Cloud ecosystem integration. |
+| **[Microsoft Speech Service](https://azure.microsoft.com/en-us/products/ai-services/speech-to-text)** 🔷 | **$3.1 Trillion** (MSFT MCap) / ~$110B+ Cloud Rev | **$1.00 / hour** ($0.0166/min for STT); **$4.00 / 1M chars** (Neural TTS) | **5 audio hours STT & 0.5M characters Neural TTS free / month** | 100+ language support, custom model training, enterprise compliance, Azure AI infrastructure integration. |
+| **[AWS Transcribe](https://aws.amazon.com/transcribe/)** ☁️ | **$1.9 Trillion** (Amazon MCap) / ~$105B+ AWS Rev | **$0.024 / minute** (First 250,000 mins/month) | **60 minutes free / month** for 12 months (AWS Free Tier) | AWS-native integration, streaming & batch modes, custom vocabulary, speaker diarization. |
+| **[ElevenLabs](https://elevenlabs.io/)** 🎙️ | **$3.3 Billion** Valuation / ~$100M+ ARR | **$5.00 / month** (Starter plan; $0.30 / 1k characters on scale) | **10,000 characters / month** forever (free tier with attribution) | Gold standard for voice cloning fidelity, emotional expression, sub-75ms TTFA inference latency. |
+| **[AssemblyAI](https://www.assemblyai.com/)** ⚡ | **$300 Million** Valuation / ~$30M+ ARR | **$0.37 / hour** ($0.00616/min for Universal-1) | **$50 free credit** upon sign-up (approx. ~135 hours of transcription) | Universal-3.5 Pro Realtime streaming, self-hosted containers (48 streams/instance), enterprise compliance & GovCloud. |
+| **[Deepgram](https://deepgram.com/)** ⚡ | **$250 Million** Valuation / ~$25M+ ARR | **$0.0043 / minute** (Pay-As-You-Go Nova-2 STT); **$0.0077 / minute** (Nova-3 Streaming) | **$200 free credit** upon sign-up (valid for 1 year, ~45,000 minutes) | Sub-300ms streaming latency, Nova-3 STT model, bundled voice agent stack with Flux end-of-turn detection. |
+| **[Speechmatics](https://www.speechmatics.com/)** 🎯 | **$150 Million** Valuation / ~$20M+ ARR | **$0.0085 / minute** ($0.51/hour for Standard ASR) | **4 hours free audio / month** (recurring) | Real-time enterprise speech recognition, exceptional multi-accent accuracy, on-prem container deployment. |
+| **[Rev.ai](https://www.rev.ai/)** 📝 | **$100 Million** Valuation / ~$15M+ ARR | **$0.02 / minute** ($1.20/hour for Automated Speech Recognition) | **5 hours free transcription** on initial sign-up | High-accuracy automated ASR, seamlessly backed by professional human transcription fallback. |
+| **[PlayHT](https://play.ht/)** 🔊 | **$40 Million** Valuation / ~$8M+ ARR | **$31.20 / month** (Creator plan, 3M characters/year) | **12,500 characters free** single allocation (non-commercial use) | Real-time conversational voice synthesis, instant voice cloning, low-latency audio streaming. |
+
+---
+
+## 🔓 Open-Source GitHub Projects
+
+Speech processing represents one of the strongest open-source AI ecosystems. The projects below are sorted by their GitHub star count in descending order ⭐.
+
+### 🎙️ Speech-to-Text (STT / ASR)
+
+- **[OpenAI Whisper](https://github.com/openai/whisper)** [![GitHub Stars](https://img.shields.io/github/stars/openai/whisper?style=social&color=white)](https://github.com/openai/whisper/stargazers) 🌟 **109.9k+ Stars**  
+  **The de facto open-source STT reference model**, MIT licensed. Multilingual (~99 languages) with `large-v3` achieving ~7.4% average WER. Model weights and code are fully MIT. The `large-v3-turbo` model (809M parameters) runs ~8× faster than original PyTorch release.
+
+- **[whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub Stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers) 🌟 **54.1k+ Stars**  
+  **High-performance C/C++ port of Whisper** built on the ggml tensor library. Lightweight, CPU-only execution with zero Python dependencies. Optimized for ARM, Apple Silicon (Core ML), and desktop embedding.
+
+- **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)** [![GitHub Stars](https://img.shields.io/github/stars/SYSTRAN/faster-whisper?style=social&color=white)](https://github.com/SYSTRAN/faster-whisper/stargazers) 🌟 **25.7k+ Stars**  
+  **CTranslate2 reimplementation of Whisper** delivering up to 4× speedup over the reference implementation with lower GPU memory footprint. Drop-in Python library for production transcription servers.
+
+- **[WhisperX](https://github.com/m-bain/whisperX)** [![GitHub Stars](https://img.shields.io/github/stars/m-bain/whisperX?style=social&color=white)](https://github.com/m-bain/whisperX/stargazers) 🌟 **24.3k+ Stars**  
+  **Whisper + pyannote speaker diarization + wav2vec2 forced alignment**. Provides exact word-level timestamp alignment and speaker label attribution out of the box.
+
+- **[NVIDIA Parakeet (NeMo)](https://github.com/NVIDIA/NeMo)** [![GitHub Stars](https://img.shields.io/github/stars/NVIDIA/NeMo?style=social&color=white)](https://github.com/NVIDIA/NeMo/stargazers) 🌟 **18.5k+ Stars**  
+  **State-of-the-art English & Multilingual ASR**. Parakeet TDT 0.6B achieves ~6.05% WER on Open ASR Leaderboard, outperforming Whisper large-v3 on English while running up to 10× faster.
+
+- **[Vosk ASR](https://github.com/alphacep/vosk-api)** [![GitHub Stars](https://img.shields.io/github/stars/alphacep/vosk-api?style=social&color=white)](https://github.com/alphacep/vosk-api/stargazers) 🌟 **15.1k+ Stars**  
+  **Offline, lightweight speech recognition toolkit**. Supports 50+ languages on mobile (Android, iOS), Raspberry Pi, and desktop apps with streaming partial results and tiny 50MB models.
+
+- **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)** [![GitHub Stars](https://img.shields.io/github/stars/k2-fsa/sherpa-onnx?style=social&color=white)](https://github.com/k2-fsa/sherpa-onnx/stargazers) 🌟 **15.1k+ Stars**  
+  **Multi-platform ONNX-based speech suite**. Offline & streaming STT, TTS, speaker recognition, and VAD across Linux, macOS, Windows, Android, iOS, and embedded devices.
+
+- **[Moonshine](https://github.com/UsefulSensors/moonshine)** [![GitHub Stars](https://img.shields.io/github/stars/UsefulSensors/moonshine?style=social&color=white)](https://github.com/UsefulSensors/moonshine/stargazers) 🌟 **11.1k+ Stars**  
+  **Ultra-fast speech recognition for edge devices**. Optimized for resource-constrained hardware (Raspberry Pi, mobile) with ~5× lower latency on short audio clips than Whisper.
+
+- **[Distil-Whisper](https://github.com/huggingface/distil-whisper)** [![GitHub Stars](https://img.shields.io/github/stars/huggingface/distil-whisper?style=social&color=white)](https://github.com/huggingface/distil-whisper/stargazers) 🌟 **4.1k+ Stars**  
+  **Distilled, 6× faster version of Whisper** with 49% fewer parameters, retaining within ~1% Word Error Rate (WER) of `large-v3` on English audio.
+
+- **[Kyutai STT](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
+  **Real-time streaming ASR with semantic VAD built-in**. Detects end-of-turn by sentence meaning rather than silence pauses. Handles ~400 concurrent streams per GPU.
+
+---
+
+### 🔊 Text-to-Speech (TTS)
+
+- **[Fish Speech](https://github.com/fishaudio/fish-speech)** [![GitHub Stars](https://img.shields.io/github/stars/fishaudio/fish-speech?style=social&color=white)](https://github.com/fishaudio/fish-speech/stargazers) 🌟 **32.9k+ Stars**  
+  **Leading open-source TTS model (Elo 1128 on TTS Arena)**. Features 5B parameters, 80+ language capabilities, fine-grained emotional control via 15,000+ prosody tags, and sub-100ms TTFA streaming.
+
+- **[Chatterbox (Resemble AI)](https://github.com/resemble-ai/chatterbox)** [![GitHub Stars](https://img.shields.io/github/stars/resemble-ai/chatterbox?style=social&color=white)](https://github.com/resemble-ai/chatterbox/stargazers) 🌟 **26.7k+ Stars**  
+  **MIT-licensed zero-shot voice cloning with expressivity tags** (laughing, sighing, emphasis). Supports 23+ languages and sub-200ms generation via Chatterbox Turbo.
+
+- **[SWivid F5-TTS](https://github.com/SWivid/F5-TTS)** [![GitHub Stars](https://img.shields.io/github/stars/SWivid/F5-TTS?style=social&color=white)](https://github.com/SWivid/F5-TTS/stargazers) 🌟 **15.3k+ Stars**  
+  **Non-autoregressive flow-matching zero-shot voice cloning**. Generates natural speech from short reference audio clips. *(Note: Code MIT, weights CC-BY-NC)*.
+
+- **[Sesame CSM-1B](https://github.com/SesameAILabs/csm)** [![GitHub Stars](https://img.shields.io/github/stars/SesameAILabs/csm?style=social&color=white)](https://github.com/SesameAILabs/csm/stargazers) 🌟 **14.7k+ Stars**  
+  **Real-time conversational speech model** built on Llama backbone + Mimi audio codec for fluid, natural human-agent dialogues. Apache-2.0 licensed.
+
+- **[Kokoro-82M](https://github.com/hexgrad/kokoro)** [![GitHub Stars](https://img.shields.io/github/stars/hexgrad/kokoro?style=social&color=white)](https://github.com/hexgrad/kokoro/stargazers) 🌟 **9.1k+ Stars**  
+  **Ultra-lightweight 82M parameter English TTS model**. Runs GPU-free on standard CPUs with exceptional quality for its size. Apache-2.0 licensed.
+
+- **[Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS)** [![GitHub Stars](https://img.shields.io/github/stars/canopyai/Orpheus-TTS?style=social&color=white)](https://github.com/canopyai/Orpheus-TTS/stargazers) 🌟 **6.3k+ Stars**  
+  **Apache-2.0 licensed 3B parameter TTS model** designed for production audiobook generation, long-form narration, and voice agent integration.
+
+- **[Kyutai Pocket TTS](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
+  **Delayed-streams speech synthesizer (1.6B & 100M Pocket variants)**. Enables real-time CPU streaming audio generation while LLM tokens are generated.
+
+---
+
+### 🤖 Voice Agent Orchestration
+
+- **[Pipecat](https://github.com/pipecat-ai/pipecat)** [![GitHub Stars](https://img.shields.io/github/stars/pipecat-ai/pipecat?style=social&color=white)](https://github.com/pipecat-ai/pipecat/stargazers) 🌟 **16.1k+ Stars**  
+  **Open-source Python framework for building voice AI agents**. Delivers sub-1000ms E2E latency with seamless multi-provider adapters for STT, LLM, and TTS pipelines.
+
+- **[LiveKit Agents](https://github.com/livekit/agents)** [![GitHub Stars](https://img.shields.io/github/stars/livekit/agents?style=social&color=white)](https://github.com/livekit/agents/stargazers) 🌟 **14.5k+ Stars**  
+  **WebRTC voice agent framework**. Connects real-time AI agents directly to WebRTC media sessions with ~750-900ms E2E latency and turn-taking controls.
+
+- **[Speaches](https://github.com/speaches-ai/speaches)** [![GitHub Stars](https://img.shields.io/github/stars/speaches-ai/speaches?style=social&color=white)](https://github.com/speaches-ai/speaches/stargazers) 🌟 **3.6k+ Stars**  
+  **"Ollama for Audio"** — self-hosted API server providing OpenAI-compatible speech endpoints with automatic GPU model loading/unloading.
+
+- **[Kyutai Unmute](https://github.com/kyutai-labs/unmute)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/unmute?style=social&color=white)](https://github.com/kyutai-labs/unmute/stargazers) 🌟 **1.5k+ Stars**  
+  **Reference voice agent architecture** combining Kyutai STT + LLM + Kyutai TTS for full sub-500ms conversational turn-taking on a single GPU.
+
+- **[omnivoice](https://github.com/plexusone/omnivoice-core)** [![GitHub Stars](https://img.shields.io/github/stars/plexusone/omnivoice-core?style=social&color=white)](https://github.com/plexusone/omnivoice-core/stargazers) 🌟 **2 Stars**  
+  **Go framework with unified interfaces** for STT, TTS, real-time voice providers, barge-in detection, MCP servers, and subtitle formatting.
+
+---
+
+### 🛠️ Additional Open-Source Speech Tools
+
+- **[pyannote.audio](https://github.com/pyannote/pyannote-audio)** [![GitHub Stars](https://img.shields.io/github/stars/pyannote/pyannote-audio?style=social&color=white)](https://github.com/pyannote/pyannote-audio/stargazers) 🌟 **10.6k+ Stars** — The benchmark open-source toolkit for speaker diarization, voice activity detection (VAD), and overlap detection.
+- **[Voxtral Mini 3B](https://github.com/mistralai/voxtral-mini-3b)** — Mistral AI's native speech-text multimodal model for transcription, translation, and audio QA. Apache-2.0.
+- **[Superwhisper S1-mini](https://github.com/superwhisper/s1-mini)** — 484MB 0.6B local model specialized in cleaning raw ASR output (fixing stutters, filler words, and punctuation).
+
+---
+
+## 🤝 How to Contribute
+
+1. Fork the repository 🍴
+2. Add/edit entries in `README.md` following the standardized table or bullet format ✍️
+3. Include: Project name, official website/repository URL, short description, and pricing/star metadata 📌
+4. Submit a Pull Request with a clear summary of additions 🚀
+
+---
+
+## ⚠️ Disclaimer
+
+- This list is **community-curated** for developer reference — not an endorsement ℹ️
+- **Data Privacy**: Speech APIs handle voice data. Ensure GDPR/CCPA compliance and verify whether commercial APIs use submitted audio for model training 🔒
+- **License Traps**: Verify pre-trained weight licenses before commercial deployment (e.g., F5-TTS weights are CC-BY-NC; Fish Speech requires commercial licensing) 📜
+
+---
+
+## 📈 Star History
+
+[![Star History Chart](https://star-history.dera.page/svg?repos=ishandutta2007/Awesome-Speech-Recognition-Synthesis-API&type=date&legend=top-left)](https://star-history.dera.page/#ishandutta2007/Awesome-Speech-Recognition-Synthesis-API&type=date&legend=top-left)
+
+---
+
+<p align="center">
+  <b>Made with ❤️ for voice AI engineers, speech researchers, and conversational AI developers.</b>
+</p>
