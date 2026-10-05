@@ -7,7 +7,7 @@
 <p align="center">
   <a href="https://github.com/ishandutta2007/Awesome-Awesome-Awesome"><img src="https://img.shields.io/badge/Awesome-%E2%9C%94-blueviolet?style=flat-square&logo=github" alt="Awesome"/></a>
   <a href="https://discord.gg/jc4xtF58Ve"><img src="https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white" alt="Discord" /></a>
-  <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="GitHub stars"/></a>
+  <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/stargazers"><img src="https://img.shields.io/github/stars/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="GitHub_Stars"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/network/members"><img src="https://img.shields.io/github/forks/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="GitHub forks"/></a>
   <a href="https://github.com/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API/blob/main/LICENSE"><img src="https://img.shields.io/github/license/ishandutta2007/Awesome-Speech-Recognition-Synthesis-API?style=flat-square" alt="License"/></a>
   <a href="https://github.com/ishandutta2007"><img alt="GitHub followers" src="https://img.shields.io/github/followers/ishandutta2007?label=Follow" /></a>
@@ -65,89 +65,89 @@ Below is the comparison of top commercial Speech-to-Text (STT) and Text-to-Speec
 
 ## 🔓 Open-Source GitHub Projects
 
-Speech processing represents one of the strongest open-source AI ecosystems. The projects below are sorted by their GitHub star count in descending order ⭐.
+Speech processing represents one of the strongest open-source AI ecosystems. The projects below are sorted by their GitHub Stars_Count in descending order ⭐.
 
 ### 🎙️ Speech-to-Text (STT / ASR)
 
-- **[OpenAI Whisper](https://github.com/openai/whisper)** [![GitHub Stars](https://img.shields.io/github/stars/openai/whisper?style=social&color=white)](https://github.com/openai/whisper/stargazers) 🌟 **109.9k+ Stars**  
+- **[OpenAI Whisper](https://github.com/openai/whisper)** [![GitHub_Stars](https://img.shields.io/github/stars/openai/whisper?style=social&color=white)](https://github.com/openai/whisper/stargazers) 🌟 **109.9k+ Stars**  
   **The de facto open-source STT reference model**, MIT licensed. Multilingual (~99 languages) with `large-v3` achieving ~7.4% average WER. Model weights and code are fully MIT. The `large-v3-turbo` model (809M parameters) runs ~8× faster than original PyTorch release.
 
-- **[whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub Stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers) 🌟 **54.1k+ Stars**  
+- **[whisper.cpp](https://github.com/ggml-org/whisper.cpp)** [![GitHub_Stars](https://img.shields.io/github/stars/ggml-org/whisper.cpp?style=social&color=white)](https://github.com/ggml-org/whisper.cpp/stargazers) 🌟 **54.1k+ Stars**  
   **High-performance C/C++ port of Whisper** built on the ggml tensor library. Lightweight, CPU-only execution with zero Python dependencies. Optimized for ARM, Apple Silicon (Core ML), and desktop embedding.
 
-- **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)** [![GitHub Stars](https://img.shields.io/github/stars/SYSTRAN/faster-whisper?style=social&color=white)](https://github.com/SYSTRAN/faster-whisper/stargazers) 🌟 **25.7k+ Stars**  
+- **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)** [![GitHub_Stars](https://img.shields.io/github/stars/SYSTRAN/faster-whisper?style=social&color=white)](https://github.com/SYSTRAN/faster-whisper/stargazers) 🌟 **25.7k+ Stars**  
   **CTranslate2 reimplementation of Whisper** delivering up to 4× speedup over the reference implementation with lower GPU memory footprint. Drop-in Python library for production transcription servers.
 
-- **[WhisperX](https://github.com/m-bain/whisperX)** [![GitHub Stars](https://img.shields.io/github/stars/m-bain/whisperX?style=social&color=white)](https://github.com/m-bain/whisperX/stargazers) 🌟 **24.3k+ Stars**  
+- **[WhisperX](https://github.com/m-bain/whisperX)** [![GitHub_Stars](https://img.shields.io/github/stars/m-bain/whisperX?style=social&color=white)](https://github.com/m-bain/whisperX/stargazers) 🌟 **24.3k+ Stars**  
   **Whisper + pyannote speaker diarization + wav2vec2 forced alignment**. Provides exact word-level timestamp alignment and speaker label attribution out of the box.
 
-- **[NVIDIA Parakeet (NeMo)](https://github.com/NVIDIA/NeMo)** [![GitHub Stars](https://img.shields.io/github/stars/NVIDIA/NeMo?style=social&color=white)](https://github.com/NVIDIA/NeMo/stargazers) 🌟 **18.5k+ Stars**  
+- **[NVIDIA Parakeet (NeMo)](https://github.com/NVIDIA/NeMo)** [![GitHub_Stars](https://img.shields.io/github/stars/NVIDIA/NeMo?style=social&color=white)](https://github.com/NVIDIA/NeMo/stargazers) 🌟 **18.5k+ Stars**  
   **State-of-the-art English & Multilingual ASR**. Parakeet TDT 0.6B achieves ~6.05% WER on Open ASR Leaderboard, outperforming Whisper large-v3 on English while running up to 10× faster.
 
-- **[Vosk ASR](https://github.com/alphacep/vosk-api)** [![GitHub Stars](https://img.shields.io/github/stars/alphacep/vosk-api?style=social&color=white)](https://github.com/alphacep/vosk-api/stargazers) 🌟 **15.1k+ Stars**  
+- **[Vosk ASR](https://github.com/alphacep/vosk-api)** [![GitHub_Stars](https://img.shields.io/github/stars/alphacep/vosk-api?style=social&color=white)](https://github.com/alphacep/vosk-api/stargazers) 🌟 **15.1k+ Stars**  
   **Offline, lightweight speech recognition toolkit**. Supports 50+ languages on mobile (Android, iOS), Raspberry Pi, and desktop apps with streaming partial results and tiny 50MB models.
 
-- **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)** [![GitHub Stars](https://img.shields.io/github/stars/k2-fsa/sherpa-onnx?style=social&color=white)](https://github.com/k2-fsa/sherpa-onnx/stargazers) 🌟 **15.1k+ Stars**  
+- **[sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx)** [![GitHub_Stars](https://img.shields.io/github/stars/k2-fsa/sherpa-onnx?style=social&color=white)](https://github.com/k2-fsa/sherpa-onnx/stargazers) 🌟 **15.1k+ Stars**  
   **Multi-platform ONNX-based speech suite**. Offline & streaming STT, TTS, speaker recognition, and VAD across Linux, macOS, Windows, Android, iOS, and embedded devices.
 
-- **[Moonshine](https://github.com/UsefulSensors/moonshine)** [![GitHub Stars](https://img.shields.io/github/stars/UsefulSensors/moonshine?style=social&color=white)](https://github.com/UsefulSensors/moonshine/stargazers) 🌟 **11.1k+ Stars**  
+- **[Moonshine](https://github.com/UsefulSensors/moonshine)** [![GitHub_Stars](https://img.shields.io/github/stars/UsefulSensors/moonshine?style=social&color=white)](https://github.com/UsefulSensors/moonshine/stargazers) 🌟 **11.1k+ Stars**  
   **Ultra-fast speech recognition for edge devices**. Optimized for resource-constrained hardware (Raspberry Pi, mobile) with ~5× lower latency on short audio clips than Whisper.
 
-- **[Distil-Whisper](https://github.com/huggingface/distil-whisper)** [![GitHub Stars](https://img.shields.io/github/stars/huggingface/distil-whisper?style=social&color=white)](https://github.com/huggingface/distil-whisper/stargazers) 🌟 **4.1k+ Stars**  
+- **[Distil-Whisper](https://github.com/huggingface/distil-whisper)** [![GitHub_Stars](https://img.shields.io/github/stars/huggingface/distil-whisper?style=social&color=white)](https://github.com/huggingface/distil-whisper/stargazers) 🌟 **4.1k+ Stars**  
   **Distilled, 6× faster version of Whisper** with 49% fewer parameters, retaining within ~1% Word Error Rate (WER) of `large-v3` on English audio.
 
-- **[Kyutai STT](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
+- **[Kyutai STT](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub_Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
   **Real-time streaming ASR with semantic VAD built-in**. Detects end-of-turn by sentence meaning rather than silence pauses. Handles ~400 concurrent streams per GPU.
 
 ---
 
 ### 🔊 Text-to-Speech (TTS)
 
-- **[Fish Speech](https://github.com/fishaudio/fish-speech)** [![GitHub Stars](https://img.shields.io/github/stars/fishaudio/fish-speech?style=social&color=white)](https://github.com/fishaudio/fish-speech/stargazers) 🌟 **32.9k+ Stars**  
+- **[Fish Speech](https://github.com/fishaudio/fish-speech)** [![GitHub_Stars](https://img.shields.io/github/stars/fishaudio/fish-speech?style=social&color=white)](https://github.com/fishaudio/fish-speech/stargazers) 🌟 **32.9k+ Stars**  
   **Leading open-source TTS model (Elo 1128 on TTS Arena)**. Features 5B parameters, 80+ language capabilities, fine-grained emotional control via 15,000+ prosody tags, and sub-100ms TTFA streaming.
 
-- **[Chatterbox (Resemble AI)](https://github.com/resemble-ai/chatterbox)** [![GitHub Stars](https://img.shields.io/github/stars/resemble-ai/chatterbox?style=social&color=white)](https://github.com/resemble-ai/chatterbox/stargazers) 🌟 **26.7k+ Stars**  
+- **[Chatterbox (Resemble AI)](https://github.com/resemble-ai/chatterbox)** [![GitHub_Stars](https://img.shields.io/github/stars/resemble-ai/chatterbox?style=social&color=white)](https://github.com/resemble-ai/chatterbox/stargazers) 🌟 **26.7k+ Stars**  
   **MIT-licensed zero-shot voice cloning with expressivity tags** (laughing, sighing, emphasis). Supports 23+ languages and sub-200ms generation via Chatterbox Turbo.
 
-- **[SWivid F5-TTS](https://github.com/SWivid/F5-TTS)** [![GitHub Stars](https://img.shields.io/github/stars/SWivid/F5-TTS?style=social&color=white)](https://github.com/SWivid/F5-TTS/stargazers) 🌟 **15.3k+ Stars**  
+- **[SWivid F5-TTS](https://github.com/SWivid/F5-TTS)** [![GitHub_Stars](https://img.shields.io/github/stars/SWivid/F5-TTS?style=social&color=white)](https://github.com/SWivid/F5-TTS/stargazers) 🌟 **15.3k+ Stars**  
   **Non-autoregressive flow-matching zero-shot voice cloning**. Generates natural speech from short reference audio clips. *(Note: Code MIT, weights CC-BY-NC)*.
 
-- **[Sesame CSM-1B](https://github.com/SesameAILabs/csm)** [![GitHub Stars](https://img.shields.io/github/stars/SesameAILabs/csm?style=social&color=white)](https://github.com/SesameAILabs/csm/stargazers) 🌟 **14.7k+ Stars**  
+- **[Sesame CSM-1B](https://github.com/SesameAILabs/csm)** [![GitHub_Stars](https://img.shields.io/github/stars/SesameAILabs/csm?style=social&color=white)](https://github.com/SesameAILabs/csm/stargazers) 🌟 **14.7k+ Stars**  
   **Real-time conversational speech model** built on Llama backbone + Mimi audio codec for fluid, natural human-agent dialogues. Apache-2.0 licensed.
 
-- **[Kokoro-82M](https://github.com/hexgrad/kokoro)** [![GitHub Stars](https://img.shields.io/github/stars/hexgrad/kokoro?style=social&color=white)](https://github.com/hexgrad/kokoro/stargazers) 🌟 **9.1k+ Stars**  
+- **[Kokoro-82M](https://github.com/hexgrad/kokoro)** [![GitHub_Stars](https://img.shields.io/github/stars/hexgrad/kokoro?style=social&color=white)](https://github.com/hexgrad/kokoro/stargazers) 🌟 **9.1k+ Stars**  
   **Ultra-lightweight 82M parameter English TTS model**. Runs GPU-free on standard CPUs with exceptional quality for its size. Apache-2.0 licensed.
 
-- **[Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS)** [![GitHub Stars](https://img.shields.io/github/stars/canopyai/Orpheus-TTS?style=social&color=white)](https://github.com/canopyai/Orpheus-TTS/stargazers) 🌟 **6.3k+ Stars**  
+- **[Orpheus-TTS](https://github.com/canopyai/Orpheus-TTS)** [![GitHub_Stars](https://img.shields.io/github/stars/canopyai/Orpheus-TTS?style=social&color=white)](https://github.com/canopyai/Orpheus-TTS/stargazers) 🌟 **6.3k+ Stars**  
   **Apache-2.0 licensed 3B parameter TTS model** designed for production audiobook generation, long-form narration, and voice agent integration.
 
-- **[Kyutai Pocket TTS](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
+- **[Kyutai Pocket TTS](https://github.com/kyutai-labs/delayed-streams-modeling)** [![GitHub_Stars](https://img.shields.io/github/stars/kyutai-labs/delayed-streams-modeling?style=social&color=white)](https://github.com/kyutai-labs/delayed-streams-modeling/stargazers) 🌟 **3.0k+ Stars**  
   **Delayed-streams speech synthesizer (1.6B & 100M Pocket variants)**. Enables real-time CPU streaming audio generation while LLM tokens are generated.
 
 ---
 
 ### 🤖 Voice Agent Orchestration
 
-- **[Pipecat](https://github.com/pipecat-ai/pipecat)** [![GitHub Stars](https://img.shields.io/github/stars/pipecat-ai/pipecat?style=social&color=white)](https://github.com/pipecat-ai/pipecat/stargazers) 🌟 **16.1k+ Stars**  
+- **[Pipecat](https://github.com/pipecat-ai/pipecat)** [![GitHub_Stars](https://img.shields.io/github/stars/pipecat-ai/pipecat?style=social&color=white)](https://github.com/pipecat-ai/pipecat/stargazers) 🌟 **16.1k+ Stars**  
   **Open-source Python framework for building voice AI agents**. Delivers sub-1000ms E2E latency with seamless multi-provider adapters for STT, LLM, and TTS pipelines.
 
-- **[LiveKit Agents](https://github.com/livekit/agents)** [![GitHub Stars](https://img.shields.io/github/stars/livekit/agents?style=social&color=white)](https://github.com/livekit/agents/stargazers) 🌟 **14.5k+ Stars**  
+- **[LiveKit Agents](https://github.com/livekit/agents)** [![GitHub_Stars](https://img.shields.io/github/stars/livekit/agents?style=social&color=white)](https://github.com/livekit/agents/stargazers) 🌟 **14.5k+ Stars**  
   **WebRTC voice agent framework**. Connects real-time AI agents directly to WebRTC media sessions with ~750-900ms E2E latency and turn-taking controls.
 
-- **[Speaches](https://github.com/speaches-ai/speaches)** [![GitHub Stars](https://img.shields.io/github/stars/speaches-ai/speaches?style=social&color=white)](https://github.com/speaches-ai/speaches/stargazers) 🌟 **3.6k+ Stars**  
+- **[Speaches](https://github.com/speaches-ai/speaches)** [![GitHub_Stars](https://img.shields.io/github/stars/speaches-ai/speaches?style=social&color=white)](https://github.com/speaches-ai/speaches/stargazers) 🌟 **3.6k+ Stars**  
   **"Ollama for Audio"** — self-hosted API server providing OpenAI-compatible speech endpoints with automatic GPU model loading/unloading.
 
-- **[Kyutai Unmute](https://github.com/kyutai-labs/unmute)** [![GitHub Stars](https://img.shields.io/github/stars/kyutai-labs/unmute?style=social&color=white)](https://github.com/kyutai-labs/unmute/stargazers) 🌟 **1.5k+ Stars**  
+- **[Kyutai Unmute](https://github.com/kyutai-labs/unmute)** [![GitHub_Stars](https://img.shields.io/github/stars/kyutai-labs/unmute?style=social&color=white)](https://github.com/kyutai-labs/unmute/stargazers) 🌟 **1.5k+ Stars**  
   **Reference voice agent architecture** combining Kyutai STT + LLM + Kyutai TTS for full sub-500ms conversational turn-taking on a single GPU.
 
-- **[omnivoice](https://github.com/plexusone/omnivoice-core)** [![GitHub Stars](https://img.shields.io/github/stars/plexusone/omnivoice-core?style=social&color=white)](https://github.com/plexusone/omnivoice-core/stargazers) 🌟 **2 Stars**  
+- **[omnivoice](https://github.com/plexusone/omnivoice-core)** [![GitHub_Stars](https://img.shields.io/github/stars/plexusone/omnivoice-core?style=social&color=white)](https://github.com/plexusone/omnivoice-core/stargazers) 🌟 **2 Stars**  
   **Go framework with unified interfaces** for STT, TTS, real-time voice providers, barge-in detection, MCP servers, and subtitle formatting.
 
 ---
 
 ### 🛠️ Additional Open-Source Speech Tools
 
-- **[pyannote.audio](https://github.com/pyannote/pyannote-audio)** [![GitHub Stars](https://img.shields.io/github/stars/pyannote/pyannote-audio?style=social&color=white)](https://github.com/pyannote/pyannote-audio/stargazers) 🌟 **10.6k+ Stars** — The benchmark open-source toolkit for speaker diarization, voice activity detection (VAD), and overlap detection.
+- **[pyannote.audio](https://github.com/pyannote/pyannote-audio)** [![GitHub_Stars](https://img.shields.io/github/stars/pyannote/pyannote-audio?style=social&color=white)](https://github.com/pyannote/pyannote-audio/stargazers) 🌟 **10.6k+ Stars** — The benchmark open-source toolkit for speaker diarization, voice activity detection (VAD), and overlap detection.
 - **[Voxtral Mini 3B](https://github.com/mistralai/voxtral-mini-3b)** — Mistral AI's native speech-text multimodal model for transcription, translation, and audio QA. Apache-2.0.
 - **[Superwhisper S1-mini](https://github.com/superwhisper/s1-mini)** — 484MB 0.6B local model specialized in cleaning raw ASR output (fixing stutters, filler words, and punctuation).
 
@@ -192,3 +192,12 @@ Thank you for visiting this repository! If you find this curated list of speech 
 <p align="center">
   <b>Made with ❤️ for voice AI engineers, speech researchers, and conversational AI developers.</b>
 </p>
+
+## Star History
+
+<a href="https://star-history.com/#ishandutta2007/Awesome-Speech-Recognition-Synthesis-API&Timeline" align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/ishandutta2007_Awesome-Speech-Recognition-Synthesis-API_growth.svg">
+    <img alt="Star History Chart" src="assets/ishandutta2007_Awesome-Speech-Recognition-Synthesis-API_growth.svg">
+  </picture>
+</a>
